@@ -88,7 +88,7 @@ describe "User pages" do
 
 				describe "toggling the button" do
 					before { click_button "Follow" }
-					it { should have_xpath("//inut[@value='Unfollow']") }
+					it { should have_xpath("//input[@value='Unfollow']") }
 				end
 			end
 
@@ -215,7 +215,7 @@ describe "User pages" do
 		describe "followers" do
 			before do 
 				sign_in other_user
-				visit	followers_user_path(other_user) 
+				visit followers_user_path(other_user) 
 			end
 
 			it { should have_title(full_title('Followers')) }
